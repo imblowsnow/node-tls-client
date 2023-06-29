@@ -5,7 +5,7 @@ Node-TLS-Client is an advanced HTTP library based on requests and tls-client.
 # Installation
 
 ```
-pip install tls-client
+npm install node-tls-client
 ```
 
 # Examples
