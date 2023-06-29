@@ -139,7 +139,7 @@ class Session {
             requestCookies: [],
             timeoutSeconds: options?.timeoutSeconds || 30,
         };
-        if (options.stream){
+        if (options?.stream){
             let uuid = crypto_1.randomUUID();
             requestPayload.streamOutputPath = path.join(this.streamPath, uuid + ".txt");
         }
@@ -168,7 +168,7 @@ class Session {
             requestPayload.withRandomTLSExtensionOrder = false;
         }
         // 是否流式请求
-        if (options.stream){
+        if (options?.stream){
             return this._requestStream(requestPayload, options.callback);
         }else{
             return this._request(requestPayload);
